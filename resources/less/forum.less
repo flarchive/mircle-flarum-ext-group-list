@@ -1,0 +1,342 @@
+.GroupList-UserList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .Avatar {
+        .Avatar--size(100px);
+    }
+
+    .UserOnline {
+        margin-right: 5px;
+
+        .icon {
+            font-size: 12px;
+        }
+
+        .fa-circle {
+            color: @online-user-circle-color;
+        }
+    }
+}
+
+.GroupList-UserList-item {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 2px;
+    width: 120px;
+
+    a {
+        color: @text-color;
+        font-weight: bold;
+    }
+
+    .badges {
+        position: absolute;
+        top: -3px;
+        left: 0;
+        right: 0;
+        text-align: right;
+        white-space: nowrap;
+        margin: 0; // Cancel rules in .DiscussionHero
+
+        .Badge {
+            margin-left: -10px;
+        }
+    }
+}
+
+.GroupList-UserList-avatar {
+    width: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.GroupList-UserList-user {
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.GroupList-content {
+    text-align: center;
+}
+
+.GroupList-title {
+    font-size: 2em;
+}
+
+.GroupList-description {
+    margin-bottom: 20px;
+}
+
+// 申请功能样式
+.GroupList-apply {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.GroupApplicationModal {
+    .GroupApplicationModal-upload {
+        margin-bottom: 10px;
+    }
+
+    .GroupApplicationModal-fileInput {
+        display: none;
+    }
+
+    .GroupApplicationModal-images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .GroupApplicationModal-image {
+        position: relative;
+        display: inline-block;
+
+        img {
+            max-width: 150px;
+            max-height: 150px;
+            border-radius: 4px;
+        }
+
+        .GroupApplicationModal-removeImage {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            line-height: 1;
+        }
+    }
+}
+
+.GroupApplicationListPage {
+    .GroupApplicationListPage-header {
+        margin-bottom: 20px;
+        text-align: center;
+        
+        h1 {
+            margin-bottom: 15px;
+            
+            .GroupApplicationListPage-count {
+                font-size: 0.8em;
+                color: @muted-color;
+                font-weight: normal;
+            }
+        }
+    }
+    
+    .GroupApplicationListPage-filters {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        
+        .GroupApplicationListPage-filterButtons {
+            display: flex;
+            gap: 8px;
+            background: @control-bg;
+            padding: 4px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            
+            .GroupApplicationListPage-filterButton {
+                position: relative;
+                padding: 8px 16px;
+                border: none;
+                border-radius: 4px;
+                background: transparent;
+                color: @text-color;
+                font-size: 13px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                min-width: auto;
+                
+                &:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                    transform: translateY(-1px);
+                }
+                
+                &.Button--primary {
+                    background: @primary-color;
+                    color: #fff;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+                    
+                    &:hover {
+                        background: darken(@primary-color, 5%);
+                        transform: translateY(-1px);
+                    }
+                }
+                
+                .GroupApplicationListPage-filterIcon {
+                    font-size: 12px;
+                    opacity: 0.8;
+                }
+                
+                .GroupApplicationListPage-filterText {
+                    white-space: nowrap;
+                }
+                
+                // 移动端适配
+                @media (max-width: 600px) {
+                    padding: 6px 12px;
+                    font-size: 12px;
+                    
+                    .GroupApplicationListPage-filterText {
+                        display: none;
+                    }
+                    
+                    .GroupApplicationListPage-filterIcon {
+                        margin: 0;
+                    }
+                    
+                    &:first-child .GroupApplicationListPage-filterText {
+                        display: inline; // "全部" 按钮在移动端也显示文字
+                    }
+                }
+            }
+        }
+    }
+    
+    .GroupApplicationListPage-empty {
+        text-align: center;
+        color: @muted-color;
+        font-style: italic;
+        padding: 40px 20px;
+    }
+
+    .GroupApplicationListPage-list {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+.GroupApplicationItem {
+    background: @body-bg;
+    border: 1px solid @control-bg;
+    border-radius: @border-radius;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    &.GroupApplicationItem--pending {
+        border-left: 4px solid #f39c12;
+    }
+
+    &.GroupApplicationItem--approved {
+        border-left: 4px solid #27ae60;
+    }
+
+    &.GroupApplicationItem--rejected {
+        border-left: 4px solid #e74c3c;
+    }
+
+    .GroupApplicationItem-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid @control-bg;
+    }
+
+    .GroupApplicationItem-status {
+        font-weight: bold;
+        padding: 4px 8px;
+        border-radius: @border-radius;
+        font-size: 12px;
+
+        .GroupApplicationItem--pending & {
+            background: #f39c12;
+            color: white;
+        }
+
+        .GroupApplicationItem--approved & {
+            background: #27ae60;
+            color: white;
+        }
+
+        .GroupApplicationItem--rejected & {
+            background: #e74c3c;
+            color: white;
+        }
+    }
+
+    .GroupApplicationItem-content {
+        margin-bottom: 15px;
+    }
+
+    .GroupApplicationItem-text {
+        line-height: 1.6;
+    }
+
+    .GroupApplicationItem-meta {
+        font-size: 12px;
+        color: @muted-color;
+        margin-bottom: 10px;
+
+        span {
+            margin-right: 15px;
+        }
+    }
+
+    .GroupApplicationItem-review {
+        background: @control-bg;
+        padding: 10px;
+        border-radius: @border-radius;
+        margin-top: 10px;
+
+        .GroupApplicationItem-reviewComment {
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+    }
+
+    .GroupApplicationItem-actions {
+        margin-top: 15px;
+        text-align: right;
+    }
+}
+
+.GroupApplicationReviewModal {
+    .GroupApplicationReviewModal-info {
+        background: @control-bg;
+        padding: 10px;
+        border-radius: @border-radius;
+        margin-bottom: 15px;
+    }
+
+    .GroupApplicationReviewModal-content {
+        margin-bottom: 20px;
+
+        h4 {
+            margin-bottom: 10px;
+        }
+
+        .GroupApplicationReviewModal-applicationContent {
+            background: @body-bg;
+            border: 1px solid @control-bg;
+            padding: 15px;
+            border-radius: @border-radius;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    }
+}
