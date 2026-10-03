@@ -2,13 +2,14 @@
 
 > **Read-only archive of released versions of mircle/flarum-ext-group-list.** Not for installation: use [Packagist](https://packagist.org/packages/mircle/flarum-ext-group-list) or the [upstream repository](https://github.com/xll98/flarum-ext-group-list).
 
-**0** versions archived · Latest: [`1.0.14`](https://github.com/flarchive/mircle-flarum-ext-group-list/tree/archive/v1.0.14) · License: `MIT` · Flarum: `^1.0`
+**2** versions archived · Latest: [`1.0.14`](https://github.com/flarchive/mircle-flarum-ext-group-list/tree/archive/v1.0.14) · License: `MIT` · Flarum: `^1.0`
 
 ## Archived Versions
 
 | Version | Released | Flarum | Source |
 |---|---|---|---|
-| — | — | — | — |
+| `1.0.13` | 2025-07-22 | `^1.0` | [Browse](https://github.com/flarchive/mircle-flarum-ext-group-list/tree/archive/v1.0.13) |
+| `1.0.14` | 2025-07-22 | `^1.0` | [Browse](https://github.com/flarchive/mircle-flarum-ext-group-list/tree/archive/v1.0.14) |
 
 Catalog entry: [packages/mircle-flarum-ext-group-list.json](https://github.com/flarchive/archive-index/blob/main/packages/mircle-flarum-ext-group-list.json)
 
